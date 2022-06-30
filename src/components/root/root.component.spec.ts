@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ColorMeDirective } from 'src/directives/color-me.directive';
 
 import { RootComponent } from './root.component';
 
@@ -7,12 +8,7 @@ describe('RootComponent', () => {
   let fixture: ComponentFixture<RootComponent>;
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ RootComponent ]
-    })
-    .compileComponents();
-
-    fixture = TestBed.createComponent(RootComponent);
+    fixture = await TestBed.createComponent(RootComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
